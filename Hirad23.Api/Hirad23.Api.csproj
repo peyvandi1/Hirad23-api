@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Hirad23.Domain\Hirad23.Domain.csproj" />
+    <ProjectReference Include="..\Hirad23.Data\Hirad23.Data.csproj" />
   </ItemGroup>
 
 </Project>
