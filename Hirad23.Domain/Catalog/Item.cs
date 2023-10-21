@@ -14,13 +14,8 @@ namespace Hirad23.Domain.Catalog
         public List<Rating> Ratings { get; set; } = new List<Rating>();
 
 
-        public Item(int id, string name, string description, string brand, decimal price)
+        public Item(string name, string description, string brand, decimal price)
         {
-
-            if (id < 0)
-            {
-                throw new ArgumentNullException("Id must be greater than zero.");
-            }
 
             if (string.IsNullOrEmpty(name))
             {
@@ -42,7 +37,6 @@ namespace Hirad23.Domain.Catalog
                 throw new ArgumentNullException("Price must be greater than zero.");
             }
 
-            Id = id;
             Name = name;
             Description = description;
             Brand = brand;
