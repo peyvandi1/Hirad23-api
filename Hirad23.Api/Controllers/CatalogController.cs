@@ -25,7 +25,7 @@ namespace Hirad23.Api.Controllers
         [HttpGet("{id:int}")]
         public IActionResult GetItem(int id)
         {
-            var item = new Item(1, "Shirt", "Ohio State shirt.", "Nike", 29.99m);
+            var item = new Item("Shirt", "Ohio State shirt.", "Nike", 29.99m);
             item.Id = id;
 
             return Ok(item);
@@ -40,7 +40,7 @@ namespace Hirad23.Api.Controllers
         [HttpPost("{id:int}/ratings")]
         public IActionResult PostRating(int id, [FromBody] Rating rating)
         {
-            var item = new Item(3, "Shirt", "Ohio State shirt.", "Nike", 29.99m);
+            var item = new Item("Shirt", "Ohio State shirt.", "Nike", 29.99m);
             item.Id = id;
             item.AddRating(rating);
 
