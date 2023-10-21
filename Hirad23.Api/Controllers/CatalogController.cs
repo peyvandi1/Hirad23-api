@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Hirad23.Domain.Catalog;
 using System.Collections.Generic;
+using Hirad23.Data;
 
 namespace Hirad23.Api.Controllers
 {
@@ -8,16 +9,17 @@ namespace Hirad23.Api.Controllers
     [Route("/catalog")]
     public class CatalogController : ControllerBase
     {
+        private readonly StoreContext _db;
+
+        public CatalogController(StoreContext db)
+        {
+            _db = db;
+        }
 
         [HttpGet]
         public IActionResult GetItems()
         {
-            var items = new List<Item>(){
-                new Item(1, "Shirt", "Ohio State shirt.", "Nike", 29.99m),
-                new Item(2, "Shorts", "Ohio State shirt.", "Nike", 44.99m)
-            };
-
-            return Ok(items);
+            return Ok(_db.Items);
         }
 
         [HttpGet("{id:int}")]
