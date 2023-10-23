@@ -1,4 +1,3 @@
-using System;
 
 namespace Hirad23.Domain.Catalog
 {

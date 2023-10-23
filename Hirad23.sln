@@ -1,18 +1,34 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
-MinimumVisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hirad23.Api", "Hirad23.Api\Hirad23.Api.csproj", "{EF000277-349A-4C6E-82BB-906B583D6F18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hirad23.Domain", "Hirad23.Domain\Hirad23.Domain.csproj", "{A7F8B3E9-C7C7-4E17-8187-ADEF60265A25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hirad23.Data", "Hirad23.Data\Hirad23.Data.csproj", "{17DFB855-29F5-4A4A-B39A-B1A9AF860586}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF000277-349A-4C6E-82BB-906B583D6F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF000277-349A-4C6E-82BB-906B583D6F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF000277-349A-4C6E-82BB-906B583D6F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF000277-349A-4C6E-82BB-906B583D6F18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7F8B3E9-C7C7-4E17-8187-ADEF60265A25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7F8B3E9-C7C7-4E17-8187-ADEF60265A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7F8B3E9-C7C7-4E17-8187-ADEF60265A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7F8B3E9-C7C7-4E17-8187-ADEF60265A25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17DFB855-29F5-4A4A-B39A-B1A9AF860586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17DFB855-29F5-4A4A-B39A-B1A9AF860586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17DFB855-29F5-4A4A-B39A-B1A9AF860586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17DFB855-29F5-4A4A-B39A-B1A9AF860586}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -24,12 +24,15 @@ namespace Hirad23.Api.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Brand")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("Price")
@@ -68,12 +71,14 @@ namespace Hirad23.Api.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Review")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("Stars")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("UserName")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
