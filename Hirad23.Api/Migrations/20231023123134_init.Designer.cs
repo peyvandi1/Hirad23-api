@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hirad23.Api.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    [Migration("20231021064100_init")]
+    [Migration("20231023123134_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -27,12 +27,15 @@ namespace Hirad23.Api.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Brand")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("Price")
@@ -71,12 +74,14 @@ namespace Hirad23.Api.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Review")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("Stars")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("UserName")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
