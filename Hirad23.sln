@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hirad23.Domain", "Hirad23.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hirad23.Data", "Hirad23.Data\Hirad23.Data.csproj", "{17DFB855-29F5-4A4A-B39A-B1A9AF860586}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{8E7C237A-B778-4C9D-ADE7-ED3A95CE4A0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hirad23.Domain.Test", "tests\Hirad23.Domain.Test\Hirad23.Domain.Test.csproj", "{F513768A-DEBB-4E1D-809A-2762EE49D58C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,12 @@ Global
 		{17DFB855-29F5-4A4A-B39A-B1A9AF860586}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17DFB855-29F5-4A4A-B39A-B1A9AF860586}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17DFB855-29F5-4A4A-B39A-B1A9AF860586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F513768A-DEBB-4E1D-809A-2762EE49D58C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F513768A-DEBB-4E1D-809A-2762EE49D58C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F513768A-DEBB-4E1D-809A-2762EE49D58C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F513768A-DEBB-4E1D-809A-2762EE49D58C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F513768A-DEBB-4E1D-809A-2762EE49D58C} = {8E7C237A-B778-4C9D-ADE7-ED3A95CE4A0A}
 	EndGlobalSection
 EndGlobal
