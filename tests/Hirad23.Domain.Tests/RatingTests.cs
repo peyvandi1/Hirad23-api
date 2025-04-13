@@ -1,10 +1,9 @@
-using Hirad23.Domain;
-using Hirad23.Domain.Catalog;
+﻿using Hirad23.Domain.Catalog;
 
-namespace Hirad23.Domain.Test;
+namespace Hirad23.Domain.Tests;
 
 [TestClass]
-public class RatingTests
+public sealed class RatingTests
 {
     [TestMethod]
     public void Can_create_New_Rating()
@@ -28,4 +27,17 @@ public class RatingTests
         var rating = new Rating(0, "Mike", "Great fit!");
     }
 
+    [TestMethod]
+    public void Can_Create_Add_Rating()
+    {
+        // Arrange
+        var item = new Item("Name", "Descriptoin", "Brand", 10.00m);
+        var rating = new Rating(5, "Name", "Review");
+
+        // Act
+        item.AddRating(rating);
+
+        // Assert
+        Assert.AreEqual(rating, item.Ratings[0]);
+    }
 }
