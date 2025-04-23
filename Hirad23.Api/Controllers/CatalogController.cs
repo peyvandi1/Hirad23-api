@@ -2,12 +2,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Hirad23.Domain.Catalog;
 using Hirad23.Data;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 
 namespace Hirad23.Api.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("/catalog")]
     public class CatalogController : ControllerBase
     {
         private readonly StoreContext _db;
@@ -20,7 +21,13 @@ namespace Hirad23.Api.Controllers
         [HttpGet]
         public IActionResult GetItems()
         {
+            // var items = new List<Item>()
+            // {
             return Ok(_db.Items);
+            // new Item("Shirt", "OSU Shirt", "Nike", 29.99m),
+            // new Item("Shorts", "OSU shorts", "Nike", 44.99m)
+        // };
+        // return Ok(items);
         }
 
         [HttpGet("{id:int}")]
@@ -31,6 +38,9 @@ namespace Hirad23.Api.Controllers
             {
                 return NotFound();
             }
+            // var item = new Item("Shirt", "OSU shirt.", "Nike", 29.99m);
+            // item.Id = id;
+
             return Ok();
         }
 
@@ -40,6 +50,8 @@ namespace Hirad23.Api.Controllers
             _db.Items.Add(item);
             _db.SaveChanges();
             return Created($"/catalog/{item.Id}", item);
+            
+            // return Created("/catalog/42", item);
         }
 
         [HttpPost("{id:int}/ratings")]
@@ -54,8 +66,18 @@ namespace Hirad23.Api.Controllers
             item.AddRating(rating);
             _db.SaveChanges();
 
+            // var item = new Item("Shirt", "OSU shirt", "Nike", 29.99m);
+            // item.Id = id;
+            // item.AddRating(rating);
+
             return Ok(item);
         }
+
+        // [HttpPut("{id:int}")]
+        // public IActionResult Put(int id, Item item)
+        // {
+        //     return NoContent();
+        // }
 
         [HttpPut("{id:int}")]
         public IActionResult PutItem(int id, [FromBody] Item item)

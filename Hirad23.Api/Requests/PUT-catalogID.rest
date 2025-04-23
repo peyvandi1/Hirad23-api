@@ -1,0 +1,10 @@
+### PUT item with ID 42
+PUT http://localhost:5250/catalog/42
+Content-Type: application/json
+
+{
+  "name": "Updated Shoes",
+  "description": "Updated description.",
+  "brand": "Nike",
+  "price": 49.99
+}

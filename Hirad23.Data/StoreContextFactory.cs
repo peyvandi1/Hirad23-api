@@ -1,16 +1,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using Hirad23.Data;
 
-namespace Hirad23.Data;
+namespace Hirad23.api.Data;
 
-    public class StoreContextFactory : IDesignTimeDbContextFactory<StoreContext>
+public class StoreContextFactory : IDesignTimeDbContextFactory<StoreContext>
+{
+  public StoreContext CreateDbContext(string[] args)
     {
-        public StoreContext CreateDbContext(string[] args)
-        {
-            var optionsBuilder = new DbContextOptionsBuilder<StoreContext>();
+      var optionsBuilder = new DbContextOptionsBuilder<StoreContext>();
 
-            optionsBuilder.UseSqlite("Data Source=../store.db");
+      optionsBuilder.UseSqlite("Data Source=../Registration.sqlite");
 
-            return new StoreContext(optionsBuilder.Options);
-        }
+      return new StoreContext(optionsBuilder.Options);
     }
+}

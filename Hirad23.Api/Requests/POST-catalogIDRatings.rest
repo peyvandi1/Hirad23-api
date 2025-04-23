@@ -1,0 +1,8 @@
+POST http://localhost:5250/catalog/1/ratings
+Content-Type: application/json
+
+{
+"stars": 5,
+"userName": "HP",
+"review": "Good"
+}

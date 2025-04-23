@@ -1,0 +1,3 @@
+### Get all catalog items
+GET http://localhost:5250/catalog/3/
+Accept: application/json

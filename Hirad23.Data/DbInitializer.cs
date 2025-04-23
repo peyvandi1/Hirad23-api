@@ -1,6 +1,9 @@
 using Hirad23.Domain.Catalog;
 using Microsoft.EntityFrameworkCore;
 
+
+//seeds the database with initial sample data
+
 namespace Hirad23.Data
 {
     public static class DbInitializer
