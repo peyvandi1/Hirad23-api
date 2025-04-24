@@ -1,0 +1,13 @@
+DELETE http://localhost:5250/catalog/5
+
+### GET token from Auth0
+curl --request POST \
+  --url https://dev-j3aklwfow806oot0.us.auth0.com/oauth/token \
+  --header 'content-type: application/json' \
+  --data '{"client_id":"VJzjIMtfevOPLj0LrYZzXzoDx0Hs1DaF","client_secret":"x_ncf5vUULz6stJROZzJ3UVECgBBoW0ieO20zMtk_y_YwlbjLGWilySPCN-b5zP5","audience":"https://hirad23-api","grant_type":"client_credentials"}'
+
+
+  ### DELETE a Item to the Catalog collection
+  curl --request DELETE \
+    --url http://localhost:5250/catalog/5 \
+    --header 'authorization: Bearer {eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkV0STM0ajhSa0VqQjVOZXpYR1pqdSJ9.eyJpc3MiOiJodHRwczovL2Rldi1qM2FrbHdmb3c4MDZvb3QwLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJWSnpqSU10ZmV2T1BMajBMcllaelh6b0R4MEhzMURhRkBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9oaXJhZDIzLWFwaSIsImlhdCI6MTc0NTUyOTA3MiwiZXhwIjoxNzQ1NjE1NDcyLCJzY29wZSI6ImRlbGV0ZWQ6Y2F0YWxvZyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyIsImF6cCI6IlZKempJTXRmZXZPUExqMExyWVp6WHpvRHgwSHMxRGFGIn0.VhMyIHRRe9x6rjkf32xaTtaLveGdFE3CsrTCZwrfIJVsCOnkNfYHlSubHbSVbY2n0y-KBiNn5YoH0R-jC4SbEf3EjxjR_ncnO9N2CaYJrPv9D43hAfoyFmLx6YkLTW1YL_bAl4T8iID7T5wD3ayq7NaFciOCbmCBMsjE_7E8ig-c1kSwjU6TjhyGA4dsQRQ85G66BtwGD4Xy_WGJZLufJ0oqpnC4qcSqY2dzp7bWtJ6ecfKYoHPoWRAMHYsYf89C2t9Pjqg03Zyr5M8k3bW9Mw-hLosuyExURzeSzRjFL0F1eXVllmlWwn7Ar5LoeyaKjohvqnzp5N7zpYByaPk20w}'

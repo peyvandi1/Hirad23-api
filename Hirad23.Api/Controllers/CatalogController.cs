@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Hirad23.Domain.Catalog;
 using Hirad23.Data;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace Hirad23.Api.Controllers
@@ -99,6 +100,7 @@ namespace Hirad23.Api.Controllers
         }
 
         [HttpDelete("{id:int}")]
+        [Authorize("delete:catalog")]
         public IActionResult DeleteItem(int id)
         {
             var item = _db.Items.Find(id);

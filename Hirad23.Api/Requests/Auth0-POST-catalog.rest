@@ -1,0 +1,5 @@
+### GET token from Auth0
+curl --request POST \
+  --url https://dev-j3aklwfow806oot0.us.auth0.com/oauth/token \
+  --header 'content-type: application/json' \
+  --data '{"client_id":"VJzjIMtfevOPLj0LrYZzXzoDx0Hs1DaF","client_secret":"x_ncf5vUULz6stJROZzJ3UVECgBBoW0ieO20zMtk_y_YwlbjLGWilySPCN-b5zP5","audience":"https://hirad23-api","grant_type":"client_credentials"}'
